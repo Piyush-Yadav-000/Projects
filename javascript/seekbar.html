@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>playback</title>
+</head>
+<style>
+    .seekbar{
+        height: 15px;
+        width: 50%;
+        background-color: grey;
+        margin-top: 20%;
+        display: flex;
+        flex-direction:column;
+        margin-left: 20%;
+    }
+    
+    .progress{
+        height: 15px;
+        width: 50%;
+        background-color: red;
+        transition: all 0s;
+        position: relative;
+    }
+    .progress::after{
+        content: '';
+        position: absolute;
+        top: -1px;
+        right: -9px;
+        width: 18px;
+        height: 17px;
+        border-radius: 30px;
+        background-color: red;
+    }
+</style>
+<body>
+    <audio src="Jo tum mere ho.mp3" id="music" controls></audio>
+    <div class="seekbar" id="seekbar">
+    <div class="progress" id="progress"></div>
+</div>
+</body>
+<script>
+    var music=document.getElementById('music');
+    var seekbar=document.getElementById('seekbar');
+    music.ontimeupdate=function (e){
+        console.log("Playing");
+        progress.style.width=(100*music.currentTime/music.duration)+"%";
+    }
+    seekbar.onclick=function(e){
+    music.currentTime=(e.offsetX/seekbar.offsetWidth)*music.duration;
+    }
+</script>
+</html>

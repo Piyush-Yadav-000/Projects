@@ -1,0 +1,56 @@
+*{
+    padding: 0;margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 800;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+    background-image: url("https://i.pinimg.com/originals/fa/26/40/fa264054b6a53d1c84b80cd982d40d80.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center center;
+}
+
+
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.overlay{
+margin: 20px;
+padding: 50px;
+}
+.overlay h1{
+    padding: 20px;
+    color: white;
+    align-self: center;
+    text-align: center;
+    
+}
+
+.col{
+    display: flex;
+    text-align: center;
+    gap: 50px;
+}
+
+input{
+    display: block;
+    width: 130px;
+    height: 50px;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    font-size: large;
+}
+label{
+    color: white;
+}
+
+
+

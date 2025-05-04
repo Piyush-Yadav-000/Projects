@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: rgb(27,236,237);
+    background: radial-gradient(circle, rgba(27,236,237,1) 4%, rgba(89,196,90,1) 21%, rgba(89,196,109,1) 42%, rgba(89,196,138,1) 49%, rgba(0,212,255,1) 98%);
+}
+.container{
+    background-color: aqua;
+    height: 40vh;
+    width: 50vh;
+    padding: 30px;
+    border-radius: 15px;
+}
+.container h1 {
+    display: inline;
+    margin-bottom: 25px;
+}
+.container img{
+    height: 25px;
+}
+
+.search{
+    height: 15%;
+    width: 100%;
+    background-color: white;
+    outline: none;
+    position: relative;
+    border-radius: 27px;
+    border: none;
+    margin-top: 15px;
+}
+.search input:focus{
+    outline:none;
+}
+.search input{
+    position: absolute;
+    top: 0px;
+    height: 100%;
+    outline:none;
+    border: none;
+    width: 80%; 
+    border-radius: 27px;  
+    padding-left: 10px; 
+    font-size: 1.2em;
+}
+
+button{
+    position: absolute;
+    right: 0px;
+    font-size: 1.2em;
+    border-radius: 27px;
+    height: 100%;
+    padding: 0 8px;
+    border: none;
+    background-color: orangered;
+    color: white;
+    border-right: gray;
+    border-style: solid 2px;
+}
+
+.list-conatiner{
+    padding: 20px;
+}
+.list-conatiner ul li{
+    list-style: none;
+    position: relative;
+    font-size: 1.2em;
+}
+
+ul li ::before{
+    content: '';
+    position: absolute;
+    background-image: url(unchecked.png);
+    left: 8px;
+    top: 12px;
+    border-radius: 50%;
+    height: 28px;
+    width: 28px;
+    background-size: cover;
+    background-position: center;
+}
